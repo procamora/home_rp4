@@ -1,0 +1,32 @@
+---
+# defaults file for common_role
+
+#path_ssl_telegraf: "{{ path_ssl }}/telegraf"
+
+default_zone: internal  # firewalld
+#default_zone_trusted: trusted  # firewalld
+
+networks:
+  hostname: rp4.procamora.com
+  hostname_short: rp4
+  network: 192.168.10.0
+  masks: 24
+  gateway: 192.168.10.1
+  ethernet_name: eth0
+  ethernet_ip: 192.168.10.180
+  ethernet_ip_fallback: 192.168.10.235
+  ethernet_metric: 200
+  wifi_name: wlan0
+  wifi_ip: 192.168.10.235
+  wifi_metric: 300
+  dns1: 1.1.1.1
+  dns2: 8.8.8.8
+
+#path_custom_worspace: /opt/custom_workspace
+config_system_locale: 'en_US.UTF-8'
+config_system_language: 'en_US.UTF-8'
+
+
+
+irrigation_path: "/home/{{ main_user }}/irrigation_controller"
+repo_tar: irrigation.tar.gz
